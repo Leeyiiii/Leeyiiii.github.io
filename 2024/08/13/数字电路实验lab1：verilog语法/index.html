@@ -1,0 +1,300 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>���ֵ�·lab1��verilog�﷨ | Leeyiiii's Blog</title><meta name="author" content="Leeyiiii"><meta name="copyright" content="Leeyiiii"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Verilog�﷨��¼һЩlab1ʵ���ĵ�����Ҫ����Ҫע������ݡ� �﷨���������ע�� Verilog ��һ�����ִ�Сд�ı�����ԡ� ÿһ��������д��һ���ڣ�Ҳ���Կ��б�д��������Ҫ�ԷֺŽ�β�� �� C �������ƣ�Verilog ��Ҳ������ע�ͷ�ʽ������ע�������ע�ͣ�������C���">
+<meta property="og:type" content="article">
+<meta property="og:title" content="���ֵ�·lab1��verilog�﷨">
+<meta property="og:url" content="http://leeyiiii.github.io/2024/08/13/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E5%AE%9E%E9%AA%8Clab1%EF%BC%9Averilog%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="Leeyiiii&#39;s Blog">
+<meta property="og:description" content="Verilog�﷨��¼һЩlab1ʵ���ĵ�����Ҫ����Ҫע������ݡ� �﷨���������ע�� Verilog ��һ�����ִ�Сд�ı�����ԡ� ÿһ��������д��һ���ڣ�Ҳ���Կ��б�д��������Ҫ�ԷֺŽ�β�� �� C �������ƣ�Verilog ��Ҳ������ע�ͷ�ʽ������ע�������ע�ͣ�������C���">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://leeyiiii.github.io/img/cover10.jpg">
+<meta property="article:published_time" content="2024-08-12T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-05T06:58:55.695Z">
+<meta property="article:author" content="Leeyiiii">
+<meta property="article:tag" content="���ݽṹ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://leeyiiii.github.io/img/cover10.jpg"><link rel="shortcut icon" href="/img/favicon1.ico"><link rel="canonical" href="http://leeyiiii.github.io/2024/08/13/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E5%AE%9E%E9%AA%8Clab1%EF%BC%9Averilog%E8%AF%AD%E6%B3%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '���ֵ�·lab1��verilog�﷨',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-05 14:58:55'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/touxiang.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/cover10.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Leeyiiii's Blog"><span class="site-name">Leeyiiii's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">���ֵ�·lab1��verilog�﷨</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-12T16:00:00.000Z" title="发表于 2024-08-13 00:00:00">2024-08-13</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-05T06:58:55.695Z" title="更新于 2024-10-05 14:58:55">2024-10-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="���ֵ�·lab1��verilog�﷨"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Verilog�﷨"><a href="#Verilog�﷨" class="headerlink" title="Verilog�﷨"></a>Verilog�﷨</h1><p>��¼һЩlab1ʵ���ĵ�����Ҫ����Ҫע������ݡ�</p>
+<h2 id="�﷨����"><a href="#�﷨����" class="headerlink" title="�﷨����"></a>�﷨����</h2><h3 id="�����ע��"><a href="#�����ע��" class="headerlink" title="�����ע��"></a>�����ע��</h3><ul>
+<li>Verilog ��һ��<strong>���ִ�Сд</strong>�ı�����ԡ�</li>
+<li>ÿһ��������д��һ���ڣ�Ҳ���Կ��б�д��������Ҫ<strong>�ԷֺŽ�β</strong>��</li>
+<li>�� C �������ƣ�Verilog ��Ҳ������ע�ͷ�ʽ������ע�������ע�ͣ�������C������ȫ��ͬ��</li>
+</ul>
+<h3 id="��ֵϵͳ"><a href="#��ֵϵͳ" class="headerlink" title="��ֵϵͳ"></a>��ֵϵͳ</h3><p>Verilog ͨ��ʹ���������ֻ�����ֵ��ʾ��ƽ�߼���</p>
+<ul>
+<li>0����ʾ�͵�ƽ�� False��</li>
+<li>1����ʾ�ߵ�ƽ�� True��</li>
+<li>x �� X����ʾ��ƽδ֪��Ҳ����˵ʵ���������Ϊ�ߵ�ƽ��Ҳ����Ϊ�͵�ƽ���������߶������ڣ�</li>
+<li>z �� Z����ʾ����̬�������������Դ���ź�û��������<br>ʲô�Ǹ���?<br>���裬����˵����ߡ�����һ�ֵ�·����ʱ���������������˵�������Ա������Ǿ��м��ߵ����루��������裬�ڼ���״̬�¾ͳ�Ϊ�˶�·����ͬ�����ֵ�·����ʵ��·�е�ƽ�ź��������仯�ģ����Ƕ��� VCC ������·��ѹ��Ҳ���ǵ�ѹ����ֵ���������ֵ�·��� 0~VCC �ķ�Χ���������仮�֡����磺0 ~ 0.3VCC Ϊ�͵�ƽ��0����0.7VCC ~ VCC Ϊ�ߵ�ƽ��1����0.3VCC ~ 0.7VCC ֮��������ڹ�����ѹ��������̬��������Ϊ������� 0 ��ѹ�� ��ˣ�<strong>�����̬������û�����������������Ϊ�ϸ��ӽ���û�������</strong><br>������ʾ�����Լ򵥵�ʹ��ʮ���Ʊ�ʾ������ 25��-7 �ȣ�Ҳ����ʹ������Ļ�����ʽ���б�ʾ��<br><code>&lt;bits&gt;&#39;&lt;radix&gt;&lt;value&gt;</code></li>
+<li>bits����������λ������һ���������������ȱ��������ɱ��������ݺ������ֵ�Զ����䡣</li>
+<li>radix �������ƣ��������֣�ʮ���ƣ�d �� D����ʮ�����ƣ�h �� H���������ƣ�b �� B���Լ��˽��ƣ�o �� O����</li>
+<li>value ����ʵ����ֵ����ʱ������»��� _ �Ա�֤���õĿɶ���<br>ע�⣬ʮ�������е�a~f�ַ��ǲ����ִ�Сд�ġ���<code>4&#39;ha=4&#39;hA</code></li>
+</ul>
+<h3 id="��ʶ����������ص㣩"><a href="#��ʶ����������ص㣩" class="headerlink" title="��ʶ����������ص㣩"></a>��ʶ����������ص㣩</h3><p>��ʶ���Ǳ�̵�ʱ��Ϊ��������� �����֡���Verilog �еı�ʶ������������һ����ĸ�������Լ���Ԫ���� $ ���»��� _ ����ϡ���ʶ����<strong>��Сд����</strong>�ģ���<strong>��һ���ַ���������ĸ�����»���</strong>��<br>�� Verilog �У�������Ҫ���������ͣ�wire �ͺ� reg �͡��������Ϳ�������Ϊ�������������͵���չ��</p>
+<ul>
+<li>wire<br>�����������������ݡ�wire �����϶�Ӧ��һ��û���κ������߼��ĵ��ߣ������������������ź�ԭ�ⲻ���ش��ݵ�����ˡ�����������������ʾ�� assign ����ڸ�ֵ������߼��źţ���Ĭ�ϳ�ʼֵ�� z������̬����<br>wire �� Verilog ��Ĭ���������͡�Ҳ����˵������û����ʽ�������͵��źţ�Verilog һ�ɽ���Ĭ��Ϊ wire ���͡�</li>
+<li>reg<br>���������� always ����ڲ����и�ֵ�������źš�һ����ԣ�reg �ͱ�����Ӧ��һ�ִ洢��Ԫ����Ĭ�ϳ�ʼֵ�� x��δ֪״̬����Ϊ�˱�����ܵĴ��󣬷����� always ����ڲ�����ֵ���źţ���Ӧ�ñ������ reg ���͡�<br><strong>��� always ������������߼�����ô reg �ͻ��ۺϳ�һ���ߣ���� always ��������ʱ���߼�����ô reg �Ż��ۺϳ�һ���Ĵ�����</strong><br>����������ʱ������һ��ʹ�����µĸ�ʽ��<br><code>wire/reg [width-1:0] (&lt;var_name&gt;,...) ;</code><br>���� width �������������źŵ�λ�������� <code>reg [3:0] ans</code>; ������һ�� reg ���͡�λ��Ϊ 4 �ı��� ans�����ʡ�� width ��д����Ĭ�ϱ�����λ��Ϊ 1���ȼ��� [0:0]���������� wire �ͱ������� reg �ͱ�����Verilog ͳһ��λ��Ϊ 1 �ı�������<strong>������Scalar��</strong>��λ������ 1 �ı�������<strong>������Vector��</strong>��<br>�ڱ���ʽ�У����ǿ�����ѡ�������е�һλ�����ڼ�λ���ֱ��Ϊλѡ��bit-select������ѡ��part-select�������磺<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c">wire [<span class="hljs-number">4</span>:<span class="hljs-number">0</span>] my_vec;      <span class="hljs-comment">// һ��λ��Ϊ 5 ����������ΧΪ 0 ~ 4</span><br><br><span class="hljs-comment">// �ٶ� my_vec ��ʱ��ֵ�� 5&#x27;b01011</span><br><br>my_vec[<span class="hljs-number">0</span>]       <span class="hljs-comment">// ��ʾ���λ��ֵΪ 1&#x27;b1</span><br>my_vec[<span class="hljs-number">3</span>:<span class="hljs-number">2</span>]     <span class="hljs-comment">// ��ʾ���ġ���λ��ֵΪ 2&#x27;b10</span><br>my_vec[<span class="hljs-number">4</span>]       <span class="hljs-comment">// ��ʾ���λ��ֵΪ 1&#x27;b0</span><br></code></pre></td></tr></table></figure>
+Verilog ��Ҳ�Ǵ�������ĸ���ġ�����԰������µĸ�ʽ��ʼ��һ�����飺<br><code>wire/reg [width-1:0] &lt;var_name&gt; [0:width-1];</code><br>���磺<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c">reg [<span class="hljs-number">7</span>:<span class="hljs-number">0</span>] my_regs [<span class="hljs-number">0</span>:<span class="hljs-number">31</span>];<br></code></pre></td></tr></table></figure>
+��δ���������һ�����飬��������32��λ��Ϊ8��reg�ͱ�����ɡ�</li>
+</ul>
+<h3 id="�����"><a href="#�����" class="headerlink" title="�����"></a>�����</h3><h4 id="���������"><a href="#���������" class="headerlink" title="���������"></a>���������</h4><p>����������ֳ�Ϊ������������������֣���Ϊ˫Ŀ�������Ϊ��</p>
+<ul>
+<li>+���ӣ�</li>
+<li>-������</li>
+<li>*���ˣ�</li>
+<li>&#x2F;������</li>
+<li>%��ȡģ��</li>
+</ul>
+<p><strong>���˱�ʾ�ӷ��ͼ������㣬+ �� - Ҳ������Ϊ��Ŀ������ʹ�ã����ڱ�ʾ�������������ԡ�������������ȼ���ߡ�</strong></p>
+<h4 id="��ϵ�����"><a href="#��ϵ�����" class="headerlink" title="��ϵ�����"></a>��ϵ�����</h4><p>�����֣�</p>
+<ul>
+<li><blockquote>
+<p>�����ڣ�</p>
+</blockquote>
+</li>
+<li>&lt;��С�ڣ�</li>
+<li><blockquote>
+<p>&#x3D;�����ڵ��ڣ�</p>
+</blockquote>
+</li>
+<li>&lt;&#x3D;��С�ڵ��ڣ�</li>
+<li>&#x3D;&#x3D;�����ڣ�</li>
+<li>!&#x3D;�����ȣ�</li>
+<li>&#x3D;&#x3D;&#x3D;��ȫ�ȣ�</li>
+<li>!&#x3D;&#x3D;����ȫ�ȣ�<br>��ϵ��������������̶�Ϊ 0��False���� 1��True������һ�� 1bit ��ֵ�����ĳһ������������һλΪ x �� z����ǰ���ֹ�ϵ����Ľ��Ϊ x��<strong>ȫ�ȱȽ����Ϊ x �� z ��λҲ���бȽϣ�ֻ��������������ȫһ��ʱ���������� 1���������� 0��</strong><br>���磺<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">(4&#x27;b1010 == 4&#x27;b101x) = x<br><br>(4&#x27;b101z == 4&#x27;b1010) = x<br><br>(4&#x27;b1010 === 4&#x27;b101x) = 0<br><br>(4&#x27;b101z === 4&#x27;b1010) = 0<br><br>(4&#x27;b101z === 4&#x27;b101z) = 1<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="�߼������"><a href="#�߼������" class="headerlink" title="�߼������"></a>�߼������</h4><p>�����֣�</p>
+<ul>
+<li>&amp;&amp;���߼��룩</li>
+<li>||���߼���</li>
+<li>!���߼��ǣ�<br>�߼�������ļ�����Ҳ��һ�� 1bit ��ֵ������ 0 ��ʾ False��1 ��ʾ True��x ��ʾ��ȷ�������һ����������Ϊ 0�������߼�����ʱ���ȼ����߼� 1�����һ������������ 0����������ʱ�ȼ����߼� 0�����������һλΪ x �� z�������ȼ��� x��</li>
+</ul>
+<h4 id="��λ�����"><a href="#��λ�����" class="headerlink" title="��λ�����"></a>��λ�����</h4><p>�����֣�</p>
+<ul>
+<li><strong>~����λ�ǣ�</strong></li>
+<li>&amp;����λ�룩</li>
+<li>|����λ��</li>
+<li>^����λ���</li>
+<li><del>^ �� ^</del>����λͬ��<br>��λ������� 2 ����������ÿ bit ���ݽ��а�λ��������� 2 ��������λ������ȣ����� 0 ������չ����϶̵Ĳ���������λ���ǵ�Ŀ����������Բ�������ÿ bit ���ݽ���ȡ��������</li>
+</ul>
+<h4 id="��Լ�����"><a href="#��Լ�����" class="headerlink" title="��Լ�����"></a>��Լ�����</h4><p>�����֣�</p>
+<ul>
+<li>&amp;����Լ�룩</li>
+<li>~&amp;����Լ���룩</li>
+<li>|����Լ��</li>
+<li>~|����Լ�ǻ�</li>
+<li>^����Լ���</li>
+<li>~^����Լͬ��<br>��Լ������밴λ������ķ�����ͬ������Լ��������ǵ�Ŀ����������Զ�λ��������λ���в��������ղ���һ�� 1bit ��������磺<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">A = 4&#x27;b1010;<br>&amp;A        // ���Ϊ 1 &amp; 0 &amp; 1 &amp; 0 = 1&#x27;b0���������жϱ��� A �Ƿ�ȫ 1<br>~|A       // ���Ϊ ~(1 | 0 | 1 | 0) = 1&#x27;b0, �������жϱ��� A �Ƿ�Ϊȫ 0<br>^A        // ���Ϊ 1 ^ 0 ^ 1 ^ 0 = 1&#x27;b0<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="���������-1"><a href="#���������-1" class="headerlink" title="���������"></a>���������</h4><p><code>��������ʽ ? ���֧ : �ٷ�֧</code></p>
+<h4 id="��λ�����-1"><a href="#��λ�����-1" class="headerlink" title="��λ�����"></a>��λ�����</h4><ul>
+<li>&lt;&lt;���߼����ƣ�</li>
+<li>&gt;&gt;���߼����ƣ�</li>
+<li>&lt;&lt;&lt;���������ƣ�</li>
+<li>&gt;&gt;&gt;���������ƣ�<br>���������ƺ��߼�����ʱ���ұߵ�λ�Ჹ 0�����߼�����ʱ����߸�λ�Ჹ 0������������ʱ����߸�λ�Ჹ�����λ���Ա�֤������С��ֵ����ȷ�ԡ����磺<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">A = 8&#x27;b1100_1101;<br>A &gt;&gt; 1      // �߼����ƣ��� 0��8&#x27;b0110_0110<br>A &gt;&gt;&gt; 2     // �������ƣ�������λ��8&#x27;b1111_0011<br>A &lt;&lt; 2      // �߼����ƣ��� 0��8&#x27;b0011_0100<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="y�������"><a href="#y�������" class="headerlink" title="ƴ�������"></a>ƴ�������</h4><p><code>&#123;����ʽ 1������ʽ 2,....,����ʽ N&#125;</code><br>ƴ����������ڽ����������ƴ�ӳ��µĲ����������еı���ʽ�ȿ����ǳ���Ҳ�����Ǳ���������<strong>λ��������ȷ���Ҳ��ɱ��</strong>��<br><strong>�ڽ��ظ�����Ƕ��ƴ�Ӳ���ʱ����Ҫ�ô����Ű��ظ��������������������磺����� <code>&#123;&#123;24&#123;a[7]&#125;&#125;, a[7:0]&#125; </code>��Ϊ <code>&#123;24&#123;a[7]&#125;, a[7:0]&#125; </code>�ͻ�����﷨����</strong></p>
+<h2 id="Verilog���"><a href="#Verilog���" class="headerlink" title="Verilog���"></a>Verilog���</h2><h3 id="������ֵ��assgin"><a href="#������ֵ��assgin" class="headerlink" title="������ֵ��assgin"></a>������ֵ��assgin</h3><p>������ֵ������ڶ� wire �ͱ������и�ֵ����ͨ�ø�ʽ���£�<br><code>assign LHS = RHS;</code><br>�磺</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c">wire Cout, A, B;<br>assign Cout = A &amp; B;<br></code></pre></td></tr></table></figure>
+<p>ע�⣺</p>
+<ul>
+<li>LHS ������һ�� wire �ͱ������������� reg ���͵ı�����</li>
+<li>RHS ������û��Ҫ��</li>
+<li><strong>ֻҪ RHS ����ʽ�Ĳ��������¼�������ֵ�ı仯��ʱ��RHS �ͻ��������¼��㣬ͬʱ��ֵ�� LHS��</strong>�������� Verilog ���Ե�Ӳ��������assign ���ʵ�����ǹ�����һ���ŵ�·���᳤�ڴ���������ϵͳ֮�С�</li>
+</ul>
+<h3 id="���̸�ֵ��always"><a href="#���̸�ֵ��always" class="headerlink" title="���̸�ֵ��always"></a>���̸�ֵ��always</h3><p>���̸�ֵ������ڶ� reg �ͱ������и�ֵ���� 2 �ֹؼ����������ֱ��� <code>initial</code> �� <code>always</code>����������䲻��Ƕ��ʹ�ã��˴˼䲢��ִ�У�ִ�е�˳��������ģ���е�ǰ��˳��û�й�ϵ������� <code>initial</code> �� <code>always</code> ����ڰ��������䣬����Ҫ����ؼ��� <code>begin</code> �� <code>end</code> ���һ������䡣<br>ÿ�� <code>initial</code> ���� <code>always</code> ��䶼�����һ�������Ŀ�������ִ��ʱ�䶼�Ǵ� 0 ʱ�̿�ʼ�����ߵ��������� <code>initial</code> ���� 0 ʱ�̿�ʼִ��һ���ڲ�����䣬�� <code>always</code> ����� 0 ʱ�̿�ʼִ�У���ִ�������һ�����󣬱��ٴ�ִ�������еĵ�һ����䣬���ѭ��������<br>û���κ��������Ƶ� always ��������ô���á���ˣ�always ������<strong>���б���</strong>�ĸ�����ǳ���������ĸ�ʽʹ�� always ��䣺<br><code>always @(���б����б�) �������</code><br>���б������Ǵ��� always ���ڲ������������������б�����always �������б��еı��������仯ʱ��ִ���ڲ��Ĺ�����䡣</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">// ÿ�� a �� b ��ֵ�����仯ʱ��ִ���ڲ������</span><br>always @(a or b) begin<br>    [�������]<br>end<br></code></pre></td></tr></table></figure>
+<p><strong>���д��������� always �������������ճ���ʹ�÷�ʽ��</strong><br>�е�ʱ�������б����࣬һ��һ������̫�鷳����������©��Ϊ�˽��������⣬Verilog 2001 ��׼����ʹ�÷��� * �������б��б�ʾȱʡ������������� always ���ڲ��������Զ�ʶ�����б�����<br>���磺</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">reg Cout;<br>wire A, B;<br>always @(*) begin<br>    Cout = A &amp; B;<br>end<br></code></pre></td></tr></table></figure>
+<p>����ֱ��ʹ���ź���Ϊ���б�����Verilog ��֧��ͨ��ʹ�� posedge �� negedge �ؼ��ֽ���ƽ�仯��Ϊ���б��������� posedge ��Ӧ�����أ�negedge ��Ӧ�½��ء����磺����Ĵ������ clk �ӵ͵�ƽ��0����Ϊ�ߵ�ƽ��1��ʱ������</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">reg Cout;<br>wire A, B, clk;<br>always @(posedge clk) begin<br>    Cout &lt;= A &amp; B;<br>end<br></code></pre></td></tr></table></figure>
+<p>���ֵ�·�У����ǰѵ�ƽ�ӵ͵�ƽ��0����Ϊ�ߵ�ƽ��1����һ˲�䣨ʱ�̣���Ϊ<strong>������</strong>���Ӹߵ�ƽ��1����Ϊ�͵�ƽ��0����һ˲�䣨ʱ�̣���Ϊ<strong>�½���</strong>��</p>
+<h3 id="������ֵ�ͷ�������ֵ"><a href="#������ֵ�ͷ�������ֵ" class="headerlink" title="������ֵ�ͷ�������ֵ"></a>������ֵ�ͷ�������ֵ</h3><p>ע�⵽�������δ����У�����ʹ����������������и�ֵ������&#x3D; �� &lt;&#x3D;�����Ƿֱ��Ӧ��������ֵ�ͷ�������ֵ��</p>
+<ul>
+<li>������ֵ<br>������ֵ��˳��ִ�еģ�����һ�����ִ��ǰ����ǰ���һ����ִ����ϡ����� C ���Եĸ�ֵ˼����һ�µġ�������ֵ���ʹ�õȺ� &#x3D; ��Ϊ��ֵ����</li>
+<li>��������ֵ<br>��������ֵ���ڲ���ִ����䣬��<strong>��һ������ִ�к͵�ǰ����ִ����ͬʱ���е�</strong>������������λ��ͬһ�������к�������ִ�С���������ֵ���ʹ��С�ڵ��ں� &lt;&#x3D; ��Ϊ��ֵ����<br>��ʵ�ʵ� Verilog �������ʱ��<strong>��Ҫ</strong>��һ�����̽ṹ�л��ʹ��������ֵ���������ֵ�����ָ�ֵ��ʽ����ʱ��ʱ�����׿��ƣ������׵õ�����Ľ����<br>һ����ԣ�����Ƶ�·ʱ��always ʱ���߼����ж��÷�������ֵ��always ����߼����ж���������ֵ���ڷ����·ʱ��initial ����һ�����������ֵ��</li>
+</ul>
+<h3 id="������䣺if��case"><a href="#������䣺if��case" class="headerlink" title="������䣺if��case"></a>������䣺if��case</h3><p>if-else �������ʵ�ִ������ȼ���������֧��һ������� always ����У�������ֱ����ģ���ڲ��������֡����÷�Ϊ��</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">if</span> (����) �������<br>[<span class="hljs-keyword">else</span> �������]<br></code></pre></td></tr></table></figure>
+<p>���� if ��䣬Verilog ���ṩ�� case ������ھ�����ͬ���ȼ���������֧��case �� endcase �����ؼ��ֱ���ɶԳ��֡��� if-else ���һ����case �������� always ���У���������ģ���ڲ��������֡����÷����£�</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">case</span>��<span class="hljs-keyword">case</span> ����ʽ��<br>    <span class="hljs-keyword">case</span> ��Ŀ����ʽ <span class="hljs-number">1</span>���������<br>    <span class="hljs-keyword">case</span> ��Ŀ����ʽ <span class="hljs-number">2</span>���������<br>    ...<br>    [<span class="hljs-keyword">default</span>:�������]<br>endcase<br></code></pre></td></tr></table></figure>
+<p><strong>������ʡ��</strong>default���</p>
+<h2 id="������Ԫ��g��"><a href="#������Ԫ��g��" class="headerlink" title="������Ԫ��ģ��"></a>������Ԫ��ģ��</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://leeyiiii.github.io">Leeyiiii</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://leeyiiii.github.io/2024/08/13/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E5%AE%9E%E9%AA%8Clab1%EF%BC%9Averilog%E8%AF%AD%E6%B3%95/">http://leeyiiii.github.io/2024/08/13/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E5%AE%9E%E9%AA%8Clab1%EF%BC%9Averilog%E8%AF%AD%E6%B3%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://leeyiiii.github.io" target="_blank">Leeyiiii's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%EF%BF%BD%EF%BF%BD%EF%BF%BD%DD%BDu/">���ݽṹ</a></div><div class="post_share"><div class="social-share" data-image="/img/cover10.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/08/13/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E5%87%BD%E6%95%B0/" title="数据结构：结构体与函数"><img class="cover" src="/img/cover9.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">数据结构：结构体与函数</div></div></a></div><div class="next-post pull-right"><a href="/2024/08/12/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" title="数据结构：动态内存分配"><img class="cover" src="/img/cover6.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">数据结构：动态内存分配</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/touxiang.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Leeyiiii</div><div class="author-info__description">今人不见古时月，今月曾经照古人</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">7</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Leeyiiii"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Leeyiiii" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://mail.ustc.edu.cn/coremail/XT/index.jsp?sid=BAzOqWJJzICQuisKTXhAvhSvGfUwPWDJ#mail.welcome" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">自用</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Verilog%EF%BF%BD%EF%B7%A8"><span class="toc-number">1.</span> <span class="toc-text">Verilog�﷨</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BF%BD%EF%B7%A8%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.</span> <span class="toc-text">�﷨����</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D7%A2%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.1.</span> <span class="toc-text">�����ע��</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%D6%B5%CF%B5%CD%B3"><span class="toc-number">1.1.2.</span> <span class="toc-text">��ֵϵͳ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%CA%B6%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D8%B5%E3%A3%A9"><span class="toc-number">1.1.3.</span> <span class="toc-text">��ʶ����������ص㣩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.4.</span> <span class="toc-text">�����</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.4.1.</span> <span class="toc-text">���������</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%CF%B5%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.4.2.</span> <span class="toc-text">��ϵ�����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BF%BD%DF%BC%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.4.3.</span> <span class="toc-text">�߼������</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%CE%BB%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.4.4.</span> <span class="toc-text">��λ�����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%D4%BC%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.4.5.</span> <span class="toc-text">��Լ�����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-1"><span class="toc-number">1.1.4.6.</span> <span class="toc-text">���������</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%CE%BB%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD-1"><span class="toc-number">1.1.4.7.</span> <span class="toc-text">��λ�����</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#y%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.1.4.8.</span> <span class="toc-text">ƴ�������</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Verilog%EF%BF%BD%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.2.</span> <span class="toc-text">Verilog���</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D6%B5%EF%BF%BD%EF%BF%BDassgin"><span class="toc-number">1.2.1.</span> <span class="toc-text">������ֵ��assgin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%CC%B8%EF%BF%BD%D6%B5%EF%BF%BD%EF%BF%BDalways"><span class="toc-number">1.2.2.</span> <span class="toc-text">���̸�ֵ��always</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D6%B5%EF%BF%BD%CD%B7%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D6%B5"><span class="toc-number">1.2.3.</span> <span class="toc-text">������ֵ�ͷ�������ֵ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%E4%A3%BAif%EF%BF%BD%EF%BF%BDcase"><span class="toc-number">1.2.4.</span> <span class="toc-text">������䣺if��case</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%D4%AA%EF%BF%BD%EF%BF%BDg%EF%BF%BD%EF%BF%BD"><span class="toc-number">1.3.</span> <span class="toc-text">������Ԫ��ģ��</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/08/13/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E5%87%BD%E6%95%B0/" title="数据结构：结构体与函数"><img src="/img/cover9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构：结构体与函数"/></a><div class="content"><a class="title" href="/2024/08/13/%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E5%87%BD%E6%95%B0/" title="数据结构：结构体与函数">数据结构：结构体与函数</a><time datetime="2024-08-12T16:00:00.000Z" title="发表于 2024-08-13 00:00:00">2024-08-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/13/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E5%AE%9E%E9%AA%8Clab1%EF%BC%9Averilog%E8%AF%AD%E6%B3%95/" title="���ֵ�·lab1��verilog�﷨"><img src="/img/cover10.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="���ֵ�·lab1��verilog�﷨"/></a><div class="content"><a class="title" href="/2024/08/13/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E5%AE%9E%E9%AA%8Clab1%EF%BC%9Averilog%E8%AF%AD%E6%B3%95/" title="���ֵ�·lab1��verilog�﷨">���ֵ�·lab1��verilog�﷨</a><time datetime="2024-08-12T16:00:00.000Z" title="发表于 2024-08-13 00:00:00">2024-08-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/12/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" title="数据结构：动态内存分配"><img src="/img/cover6.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构：动态内存分配"/></a><div class="content"><a class="title" href="/2024/08/12/%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/" title="数据结构：动态内存分配">数据结构：动态内存分配</a><time datetime="2024-08-11T16:00:00.000Z" title="发表于 2024-08-12 00:00:00">2024-08-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/11/%E7%89%B9%E6%AE%8A%E6%8C%87%E9%92%88/" title="数据结构：特殊类型指针"><img src="/img/cover5.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构：特殊类型指针"/></a><div class="content"><a class="title" href="/2024/08/11/%E7%89%B9%E6%AE%8A%E6%8C%87%E9%92%88/" title="数据结构：特殊类型指针">数据结构：特殊类型指针</a><time datetime="2024-08-10T16:00:00.000Z" title="发表于 2024-08-11 00:00:00">2024-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/10/%E6%B8%90%E8%BF%9B%E5%8C%96%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/" title="数据结构：渐进化分析"><img src="/img/cover4.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构：渐进化分析"/></a><div class="content"><a class="title" href="/2024/08/10/%E6%B8%90%E8%BF%9B%E5%8C%96%E5%88%86%E6%9E%90%E5%9F%BA%E7%A1%80/" title="数据结构：渐进化分析">数据结构：渐进化分析</a><time datetime="2024-08-09T16:00:00.000Z" title="发表于 2024-08-10 00:00:00">2024-08-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Leeyiiii</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.1
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, '']
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typesetPromise()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
